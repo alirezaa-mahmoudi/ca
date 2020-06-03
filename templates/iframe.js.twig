@@ -1,0 +1,30 @@
+const  ifrm = document.createElement('iframe');
+ifrm.setAttribute('id', 'ifrm'); // assign an id
+ifrm.style.height = '100px';
+ifrm.style.width = '100px';
+ifrm.style.position='fixed';
+ifrm.style.margin = '10px';
+ifrm.style.padding= '10px';
+ifrm.style.boxSizing='border-box';
+ifrm.style.bottom = '0vh';
+ifrm.style.right = '0';
+ifrm.style.border = 'solid 1px blue';
+ifrm.style.zIndex = '100';
+ifrm.style.overflow='hidden'
+ifrm.style.background = '#88bddb'
+document.body.appendChild(ifrm); // to place at end of document
+const wrapper = document.createElement("div");
+wrapper.setAttribute('id', 'wrapper');
+wrapper.style.display='flex'
+wrapper.style.justifyContent = 'center'
+wrapper.style.alignItems = 'center'
+const score = document.createElement("div")
+score.style.background = 'white'
+score.style.width = '100%'
+score.style.textAlign= 'center'
+ifrm.contentDocument.body.append(wrapper)
+ifrm.contentDocument.getElementById('wrapper').appendChild(score)
+score.innerText={{ score }}
+
+
+
